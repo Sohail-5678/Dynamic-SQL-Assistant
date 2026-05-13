@@ -37,7 +37,7 @@ def get_llm():
     # Initialize the Groq LLM with Llama 3
     return ChatGroq(
         api_key=api_key,
-        model_name="llama3-70b-8192",  # Llama 3 70B model
+        model_name="llama-3.3-70b-versatile",  # Llama 3.3 70B model
         temperature=0.1,  # Low temperature for more deterministic SQL output
         max_tokens=1024,
     )
