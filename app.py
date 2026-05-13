@@ -150,7 +150,7 @@ if st.session_state.df is not None:
 
                             # Display results
                             st.subheader("Query Results")
-                            st.dataframe(result_df, use_container_width=True)
+                            st.dataframe(result_df, width="stretch")
 
                             # Download button
                             csv_out = result_df.to_csv(index=False)
@@ -192,10 +192,10 @@ if st.session_state.df is not None:
             "Original Column Name": list(column_mapping.keys()),
             "Processed Column Name (use this in queries)": list(column_mapping.values()),
         })
-        st.dataframe(mapping_data, use_container_width=True)
+        st.dataframe(mapping_data, width="stretch")
 
         st.write("#### Sample Data (first 10 rows)")
-        st.dataframe(display_df.head(10), use_container_width=True)
+        st.dataframe(display_df.head(10), width="stretch")
 
     # Query history
     if st.session_state.query_history:
